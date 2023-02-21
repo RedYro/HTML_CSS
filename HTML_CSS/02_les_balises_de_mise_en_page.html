@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="/css/02_les_balises_de_mise_en_page.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Grégory Lyfoung : Les balises de mise en page en HTML">
+    <meta name="author" content=" Grégory Lyfoung">
+    <title>Les balises de mise en page</title>
+</head>
+
+<body>
+    <header><!--Ouverture balise header-->
+            <!--La partie haute de la page affichée sur le navigateur et visible par l'internaute-->
+
+        <h1>"La balise header"</h1>
+        <p>La balise header permet de définir une zone d'en-tête dans laquelle on retrouvera généralement le h1 (titre principal de la page), 
+            la navigation et le logo du site</p>
+
+        <nav><!--La zone pour le menu du site : menu de navigation ou les liens des navigations-->
+             <!--Quand je n'ai pas encore ciblé une page (créer une page pour le lien), je met un dièse dans le href:
+                 celà permet de signifier que le lien renvoie vers ma page-->
+            <a href="#">Acceuil</a>
+            <a href="#">A propos</a>
+            <a href="#">Contact</a>
+
+        </nav>
+    </header><!--Fermeture de la balise header-->
+
+    <main>
+        <h3>"La balise main"</h3>
+        <p>Partie qui regroupe généralement les infos principales les plus recherchées par l'utilisateur.</p>
+        <section>
+            <h4>Les balises "section" et "div"</h4>
+            <!--section: contient de nombreux éléments spécifiques (regroupement thématique)
+            comme les chapitres, des introductions, des conclusions etc.-->
+            <p>Elles ont la même fonction de séparation des informations. On utlisera plutôt "section" qui est une balise HTML 5 plus adaptée au découpage clair d'une page</p>
+            <p>La "section" contient des éléments, titres, textes, images etc., spécifiques à chaque page du site</p>
+            
+            <!--La balise "div" sert à structurer le doc en plusieurs zones, elle n'a pas de valeur sémentique-->
+            
+            <div>
+                <p>Les balises "div", pour division, sont des zones supplémentaires de contenu</p>
+                <p>Pour mettre des blocs en plus dans la section on les insère avec des balises "div"</p> 
+            </div>
+
+            <article>
+                <h4>La balise article</h4>
+                <p>Elle permet de définir des articles, souvent accompagnés, de titres, d'images et de liens.</p>
+            </article>
+
+            <aside>
+                <h4>La balise aside</h4>
+                <p>Elle définit un contenu à part du génaral, colone latéral</p>
+            </aside>
+
+        </section>
+
+    </main> <!--Fermeture de balise main-->
+
+    <footer> <!--Ouverture de la balise footer-->
+        <h3>La balise footer</h3>
+        <p>Le footer est la zone du bas de la page, elle permet de définir les informations que l'on trouve dans le pied de page,
+        mentions légales, créateur du site, CGU (conditions générales d'utilisation), (les liens vers les réseaux sociaux etc.)</p>
+    </footer> <!--Fermeture de la balise footer-->
+    
+</body>
+</html>

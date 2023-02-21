@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="css/08_float_position_zoning.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Grégory Lyfoung : Page Float / Position / zoning">
+    <meta name="author" content=" Grégory Lyfoung">
+    <title>Float / Position / Zoning</title>
+</head>
+<body>
+    <header id="headerPrime">
+        <h1>Float <span>/</span> Position <span>/</span> Zoning</h1>
+    </header>
+    <main>
+        <section>
+            <h2>1 - Float</h2>
+            <div>
+                <h3>Float 1</h3>
+                <!-- div{$}*10 -->
+                <div class="carre1 alignement">1</div>
+                <div class="carre2 alignement">2</div>
+                <div class="carre3 alignement">3</div>
+                <div class="carre4 alignement">4</div>
+                <div class="carre5 alignement superpose">5</div>
+                <div class="carre6 alignement">6</div>
+                <div class="carre7 alignement">7</div>
+                <div class="carre8 alignement superpose">8</div>
+                <div class="carre9 alignement">9</div>
+                <div class="carre10 superpose">10</div>
+            </div>
+             <br>
+            <!-- div>h3+div{$}*8 -->
+            <div>
+                <h3>Exercice "Float"</h3>
+                <div class="boite1">1</div>
+                <div class="boite2">2</div>
+                <div class="boite3">3</div>
+                <div class="boite4">4</div>
+
+                <div class="superpose"></div>
+
+                <div class="boite5">5</div>
+                <div class="boite6">6</div>
+                <div class="boite7">7</div>
+                <div class="boite8">8</div>
+
+                <div class="superpose"></div>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi at debitis dicta asperiores unde quaerat perferendis ut expedita reiciendis adipisci hic accusantium, cum repudiandae ipsum provident facere veniam, quasi assumenda!</p>
+            </div>
+
+            <div>
+                <h3>Exercice "Float" 2</h3>
+
+                 <br>
+
+                <div class="rectangle"></div>
+                <div class="bloc1"></div>
+                <div class="bloc2"></div>
+                <div class="bloc3"></div>
+                <div class="bloc4"></div>
+                <div class="rectangle superpose"></div>
+
+                <!-- <div class="superpose"></div> -->
+
+            </div>
+        </section>
+
+            <!-- <br> -->
+
+        <section>
+            <h2>2 - Position</h2>
+            <div>
+                <h3>Position "absolute"</h3>
+                <div class="absolute">
+                    <p>Carré "JAUNE"</p>
+                </div>
+            </div>
+
+             <!-- <br> -->
+            
+            <div>
+                <h3>Position "relative"</h3>
+                <div class="relative">
+                    <div></div>
+                </div>
+            </div>
+
+            <!-- div>h3+figure>img+figcaption -->
+            <div>
+                <h3>Image avec une animation</h3>
+                <figure class="blocPhoto">
+                    <img src="img/Kai_Sa_Runeterra_Prime.jpg" alt="Kai'Sa">
+                    <!-- <img src="img/unnamed(6).jpg" alt="Pont San Francisco"> -->
+                    <figcaption class="photoLegende">
+                        <h4>Ma légende</h4>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div>
+                <h3>Exercice Image</h3>
+                <div class="blocPhoto2">
+                    <img src="img/Kai_Sa_IG.jpg" alt="Kai'Sa IG">
+                    <h4>Kai'Sa IG</h4>
+                </div>
+            </div>
+
+             <br>
+
+            <div>
+                <h3>Position "fixed"</h3>
+                <p>Bouton retour vers le haut de la page :</p>
+                <p>Bouton aller vers le bas de la page :</p>
+                <div>
+                    <!-- <a href="#" class="btnRetour"><span class="material-symbols-outlined">arrow_circle_up</span></a> -->
+                    <a href="#" class="btnRetour2"><i class="fa-solid fa-circle-arrow-up"></i></a>                                 
+                    <a href="#" class="btnRetour3"><i class="fa-solid fa-circle-arrow-up"></i></a>                                 
+                    <a href="#bas" class="btnRetour4"><i class="fa-solid fa-circle-arrow-down"></i></a>
+                    <a href="#bas" class="btnRetour5"><i class="fa-solid fa-circle-arrow-down"></i></a>
+                    <!-- <p id="bas"></p> = "Ancre pour a href=" -->
+                </div>
+            </div>
+
+            <div class="positionnement">
+                <h3>Position avec "z-index"</h3>
+                <div class="rela">
+                    <div class="rouge">Rouge</div>
+                    <div class="vert">Vert</div>
+                    <div class="bleu">Bleu</div>
+                </div>
+            </div>
+
+        </section>
+
+         <br>
+
+        <section class="zoning">
+            <h2>3 - Zoning</h2>
+            <div id="zoning1">
+                <h3>Zoning n°1</h3>
+                <header>
+                    <p>Ici le zoning 1</p>
+                </header>
+                <aside>
+                    <p>Zone de gauche</p>
+                </aside>
+                <section>
+                    <p>Zone de droite</p>
+                </section>
+                <div class="superpose"></div>
+            </div>
+
+             <br>
+
+            <div id="zoning2">
+                <h3>Zoning n°2</h3>
+                <header>
+                    <p>Zone de "header"</p>
+                </header>
+                <aside>
+                    <p>Zone de "gauche"</p>
+                </aside>
+                <div class="milieu">
+                    <p>Zone du "milieu"</p>
+                </div>
+                <aside>
+                    <p>Zone de "droite"</p>
+                </aside>
+                <!-- <div class="superpose"></div> -->
+            </div>
+
+             <br>
+
+            <div id="zoning3">
+                <h3>Zoning n°3</h3>
+                <header>
+                <div class="haut">
+                    <p>Haut 1 <br> DIV</p>
+                </div>
+                <div class="haut2">
+                    <p>Haut 2 <br> DIV</p>
+                </div>
+                <div class="haut">
+                    <p>Haut 3 <br> DIV</p>
+                </div>
+                </header>
+                <nav>
+                    <p>Menu <br> NAV</p>
+                </nav>
+                <aside>
+                    <p>Zone de gauche <br> ASIDE</p>
+                </aside>
+                <div class="divA">
+                    <p>A <br> DIV</p>
+                </div>
+                <div class="divB">
+                    <p>B <br> DIV</p>
+                </div>
+                <section class="exo1">
+                    <p>Slideshow, diaporama <br> SECTION</p>
+                </section>
+                <div class="divCe">
+                    <p>C <br> DIV</p>
+                </div>
+                <div class="divDf">
+                    <p>D <br> DIV</p>
+                </div>
+                <div class="divCe">
+                    <p>E <br> DIV</p>
+                </div>
+                <div class="divDf">
+                    <p>F <br> DIV</p>
+                </div>
+            </div>
+            
+             <br>
+
+            <div id="zoning4">
+                <h3>Zoning n°5</h3>
+                <header class="headerBis">
+                    <p>Header</p>
+                </header>
+                <nav class="navBis">
+                    <p>Nav</p>
+                </nav>
+                <div class="zone14">
+                    <p>Zone 1</p>
+                </div>
+                <div class="zone23">
+                    <p>Zone 2</p>
+                </div>
+                <div class="zone23">
+                    <p>Zone 3</p>
+                </div>
+                <div class="zone14">
+                    <p>Zone 4</p>
+                </div>
+                <footer class="footerBis">
+                    <p>Footer</p>
+                </footer>
+            </div>
+
+            <!-- Correction exo Zoning n°3 -->
+            <!-- <div id="zoning3">
+                <h3>Zoning n°3</h3>
+                <header >
+                     <div class="haut"><p>Haut1 <br>DIV </p></div>
+                     <div class="haut1"><p>Haut2 <br>DIV </p></div>
+                     <div class="haut"><p>Haut3 <br>DIV </p></div>
+                </header>
+                <nav>
+                     <p>Menu <br>NAV </p>
+                </nav>
+           
+                <aside>
+                     <P> Zone de Gauche <br>ASIDE </P>
+                </aside>
+                <section id="section">
+                     <div class="a">
+                          <p>A <br> DIV </p> 
+                     </div>
+                     <div class="b">
+                          <p>B <br> DIV </p>
+                     </div>
+                     <div class="superpose"></div>
+                     <section class="slideshow">
+                          <p> slideshow, diaporama  <br> SECTION </p>
+                     </section>
+                     <div class="c"> <p>C <br> DIV </p></div>
+                     <div class="d"> <p>D <br> DIV </p></div>
+                     <div class="c"> <p>E <br> DIV </p></div>
+                     <div class="d"> <p>F <br> DIV </p></div>
+                     <div class="superpose"></div>
+                </section>
+                <div class="superpose"></div>
+           </div> -->
+        </section>
+
+        <p id="bas"></p>
+
+        
+
+    </main>
+    <footer>
+
+    </footer>
+
+    <!-- balises "script" -> toujours avant la fermeture de la balise "body" -->
+    <script src="https://kit.fontawesome.com/9f9e364777.js" crossorigin="anonymous"></script>
+    
+</body>
+</html>

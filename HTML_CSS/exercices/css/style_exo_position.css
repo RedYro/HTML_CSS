@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 70%;
+    margin: 15rem;
+    background: rgb(159,0,0);
+    background: linear-gradient(90deg, rgba(159,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,6,162,1) 100%);
+}
+
+
+.red{
+    background-image: url(../img/Red_v3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: rgb(80, 0, 0);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    width: 800px;
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    line-height: 500px;
+    transition: 1s;
+    cursor: default;
+}
+
+.blue{
+    background-image: url(../img/Blue_v3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: rgb(0, 0, 90);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 800px;
+    width: 800px;
+    position: absolute;
+    left: 750px;
+    top: 0px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    line-height: 500px;
+    transition: 1s;
+    cursor: default;
+}
+
+.p1{
+    transition: 500ms;
+}
+
+.p2{
+    transition: 500ms;
+}
+
+.p1:hover{
+    color: red;
+}
+
+.p2:hover{
+    color: blue;
+}
+
+.red:hover{
+    transform: rotate(-7deg);
+}
+
+.blue:hover{
+    transform: rotate(7deg);   
+}

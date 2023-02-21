@@ -1,0 +1,79 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+body{
+    /* background-color: beige; */
+    background-image: url(../img/Ahri-ASU-Fox-Fire-Ahri.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* largeur de la page 50% de la taille de l'écran du navigateur */
+    width: 50%;
+    /* gestion auto des marges pour que la marge soit centrée dans la fenêtre */
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+h1{
+    text-align: center;
+    color: rgb(255, 0, 0);
+    /* color: rgb(29, 47, 182); */
+}
+
+caption{
+    /* color: rgb(29, 47, 182); */
+    color:red;
+    /* color: #6e2142; */
+    padding: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+table{
+    text-align: center;
+    margin-top: 50px;
+    border-collapse: collapse;
+    /* par défaut la bordure contient 2 traits, pour que le trait soit unique on utilise la propriété "border-collapse: collapse" */
+    /* border: 3px solid #6e2142; */
+    /* border: 3px solid rgb(29, 47, 182); */
+    border: 3px solid red;
+    width: 90%;
+    background-color: brown;
+}
+
+th, td{
+    /* border: 4px solid #943854; */
+    /* border: 4px solid rgb(29, 47, 182); */
+    border: 4px solid red;
+    padding: 10px;
+}
+
+thead, tfoot{
+    background-color: #be7575;
+}
+
+h2{
+    text-align: center;
+    color: red;
+    font-size: 30px;
+}
+
+#demoColspan td{
+    height: 30px;
+    width: 30px;
+}
+
+.noir{
+    background-color: black;
+}
+
+#demoColspan2 td{
+    height: 30px;
+    width: 30px;
+}
+
+.noir2{
+    background-color: rgb(95, 80, 80);
+}

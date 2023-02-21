@@ -1,0 +1,240 @@
+body{
+    background-color: rgb(180, 180, 180);
+    /* background-image: url(../img/Ahri-ASU-Fox-Fire-Ahri.jpg); */
+    /* background-size: contain; */
+    /* background-repeat: no-repeat; */
+    /* background-position: center; */
+    /* font-size: 20px; */
+
+}
+
+h1{
+    color: blue;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+p{
+    color: azure;
+    font-size: 15px;
+}
+
+div.red{
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    padding: 15px;
+}
+
+div.red p{
+    color: blue;
+}
+
+div.red :first-child{
+    /* color: blueviolet; */
+    color: blue;
+    font-weight: bolder;
+    /* Pseudo class ":first-child" -> désigne le premier élément enfant */
+}
+
+div.red :nth-child(2){
+    /* pseudo-class ":nth-child()" -> permet d'accéder à un élément depuis son indice */
+    color: rgb(208, 1, 1);
+    font-weight: bolder;
+}
+
+div.red :nth-child(4){
+    color: rgb(208, 1, 1);
+    font-weight: bolder;
+}
+
+div.red :nth-child(6){
+
+    color: rgb(208, 1, 1);
+    font-weight: bolder;
+}
+
+div.red :nth-child(8){   
+    color: rgb(208, 1, 1);
+    font-weight: bolder;
+}
+
+/* div :nth-child(10){    
+    color: rgb(208, 1, 1);
+    font-weight: bolder;
+} 
+*/
+
+div.red :last-child{
+    /* Pseudo class ":last-child désigne -> le dernier enfant */
+    color: rgb(208, 1, 1);
+    font-weight: bolder;
+    /* background-color: black; */
+}
+
+div.red :nth-child(even){
+    /* tous les éléments avec un ordre pair */
+    background-color: rgb(29, 37, 201);
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+div.red :nth-child(odd){
+    /* tous les éléments avec un ordre impair */
+    background-color: rgb(214, 19, 19);
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+/* div.red :nth-child(3), div p:nth-child(6){
+    text-transform: uppercase;
+    color: blueviolet;
+} */
+
+section.select{
+    background-color: white;
+    padding: 15px;
+    width: 50%;
+}
+
+section.select p{
+    /* Ici je 'applique la couleur sur les éléments "p" qui se trouvent dans l'élément "section" avec la classe "select" */
+    color: rgb(208, 1, 1);
+    font-weight: bolder;
+}
+
+section.select p:first-of-type , section.select p:last-of-type{
+    color: white;
+}
+
+section.select p:nth-of-type(odd){
+    color: blue;
+}
+
+section.select p:nth-of-type(even){
+    color: red;
+}
+
+section div{
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+section div:not(.zoneB){
+    font-weight: lighter;
+}
+
+h3{
+    color: blue;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+section.select div.zoneA{
+    color: rgb(95, 93, 93);
+}
+
+/* section div.zoneA{
+    color: rgb(95, 93, 93);
+} */
+
+/* section.select div#zoneC{
+    color: blue;
+} */
+
+#zoneC{
+    color: blue;
+}
+
+#zoneD span:not(#zoneD){
+    color: blue;
+    /* background-color: rgb(214, 19, 19); */
+}
+
+section div#zone1{
+    height: 150px;
+    background-color: white;
+    padding: 15px;
+    width: 50%;
+}
+
+#zone1 h3, #zone1 p{
+    background-color: white;
+    width: 50%;
+    color: black;
+}
+
+#zone1::before{
+    /* On ajoute du contenu avant "id=zone1" */
+    content: "Rajouté avant la zone 1";
+    color: blue;
+}
+
+#zone1::after{
+    /* On ajoute du contenu après "id=zone1" */
+    content: "Rajouté après la zone 1";
+    color: blue;
+}
+
+/* "::before" et "::after" sont des pseudo-éléments permettant de générer ces éléments "virtuels" lors de l'interprétation du CSS uniquement */
+
+p.psde, p.pdse span{
+    color: black;
+    background-color: white;
+    width: 50%;
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+p.psde span {
+    position: relative;
+}
+
+p.psde span::before{
+    content:"👑";
+    position: absolute;
+    top: -14px;
+    left: -9px;
+    transform: rotate(-25deg);
+}
+
+
+div{
+    background-color: white;
+    width: 50%;
+    padding: 15px;
+}
+
+h4+p{
+    /* Sélectionne la première balise "p" situé après un titre h4 */
+    font-weight: bolder;
+    color: blue;
+}
+
+h4~a{
+    /* Sélectionne toutes les balises "a" situées après le titre h4 */
+    background-color: red;
+    
+}
+
+ul>li{
+    /* Sélectionne tous les éléments "li" qui sont directement situés sous un élément "ul" */
+    list-style-type: square;
+    color: red;
+}
+
+/* sélectionne tous les "a" qui ont un attribut title */
+a[title]{
+    background-color: red;
+}
+
+a[title="Cliquez ici"]{
+    text-decoration: none;
+}
+
+/* "*" permet de sélectionner tous les éléments dans une page */
+/* *{
+
+} */

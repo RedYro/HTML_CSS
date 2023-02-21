@@ -1,0 +1,181 @@
+body{
+    background-color: brown;
+}
+
+h2{
+    text-align: center;
+    font-size: 50px;
+}
+
+/* 
+Le "Media query" est une technique qui vise à changer le design d'un site internet selon les caractéristiques de l'écran utlisé. C'est un élément important du CSS3
+Pour le faire on utilise les requêtes multimédias.
+Une requête multimédia permet d'applique les styles CSS en fonction de la présence ou de la valeur des caractéristiques de l'appareil.
+Les reqûetes mutltimédias peuvent être appliquées de 2 façons :
+    -> En chargeant une feuille de style CSS différente : (non recommandé car l'on essaie de centraliser notre style css autour d'1 feuille de style)
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="petite_resolution.css" media="srceen and (max-width:1200px)"> => pour les écrans à résolution inférieur à 1200px.
+    -> En écrivant directement les règles dans la feuille de style CSS : 
+    Cette technique consiste à utiliser ce qu'on appelle les règles css @ : c'est les @rules (prononcez "at-rules") 
+    fournit des instructions sur ce que le CSS doit effectuer ou commment il doit se comporter si une condition est statisfaite.
+    Ici on utilise le @media : la règle pour inclure un bloc de propriétés CSS uniquement si une certaine condition est vraie.
+    -> les types d'écran ou support d'affichage, il existe 4 catégories de "media" types :
+        - print : destiné à un support paginé, au document vu sur écran en mode aperçu avant impression;
+        - screen : pour les appareils dotés d'un écran : ordinateur, tablette, mobile et TV;
+        - speech : pour les lecteurs d'écran qui "lisent" par synthèse vocale;
+        - all : tous les types d'appareils.
+    -> les propriétés : par exemple une largeur de la zone d'affichage, la hauteur de la zone d'affichage, l'orientation du périphérique.
+*/
+
+/* Pour les très grands écrans ("xxLarge") -> supérieur à 1400px */
+@media (min-width:1400px){
+    /* Largeur minimale 1400px, "breakpoint" (point de rupture) 
+        Breakpoint -> seuil de déclenchement.  Ils servent à déterminer à quel moment les règles CSS d'un "media query" s'appliquent au design de la page */
+    body{
+        background-color: pink;
+        background-image: url(../img/ahri_Popstar.jpg);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+    }
+    .xLarge, .large, .medium, .small, .xSmall{
+        display: none;
+    } 
+}
+
+/* Pour les grands écrans (grands moniteurs de bureau : xLarge) -> écran entre 1200px et 1399px */
+@media (min-width:1200px) and (max-width:1399.99px){
+    /* Largeur minimale et largeur maximale */
+    body{
+        background-color: teal;
+        background-image: url(../img/Ekko_PROJECT.jpg);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        color: white;
+    }
+    .xxLarge, .medium, .large, .small, .xSmall{
+        display: none;
+    }
+}
+
+/* 
+992px -> 1199px 
+background-color: khaki
+h2 -> large : affiché 
+*/
+/* Pour les grands appareils (ordinateur de bureau et portable : large) -> écran entre 992px et 1199px */
+@media (min-width:992px) and (max-width:1199.99px){
+    body{
+        background-color: khaki;
+        background-image: url(../img/Aatrox_Justice.jpg);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+    }
+    .xxLarge, .medium, .xLarge, .small, .xSmall{
+        display: none;
+    }
+}
+
+/* 
+768px -> 991px 
+background-color: purple
+color : white
+h2 -> medium : affiché 
+*/
+/* Pour les appareils moyens (tablette : medium) -> écran entre 768px et 991px */
+@media (min-width:768px) and (max-width:991.99px){
+    body{
+        background-color: purple;
+        background-image: url(../img/Kai_Sa_Runeterra_Bis_v2.jpg);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        color: white;
+    }
+    .xxLarge, .large, .xLarge, .small, .xSmall{
+        display: none;
+    }
+}
+
+/* 
+576px -> 767px 
+background-color: orange
+h2 -> small : affiché 
+*/
+/* Pour les petits appareils (téléphone mobile : small) -> écran entre 576px et 767px */
+@media (min-width:576px) and (max-width:767.99px){
+    body{
+        background-color: orange;
+        background-image: url(../img/Yasuo_Nightbringer_v2.jpg);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+    }
+    .xxLarge, .large, .xLarge, .medium, .xSmall{
+        display: none;
+    }
+}
+
+/* 
+575px 
+background-color: green
+color : white
+h2 -> xSmall : affiché 
+*/
+/* Pour les très petits appareils (xSmall) -> taille inférieure à 575px */
+@media (max-width:576px){
+    body{
+        background-color: green;
+        background-image: url(../img/Riven_Dawnbringer_v2.jpg);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        color: white;
+    }
+    .xxLarge, .large, .xLarge, .medium, .small{
+        display: none;
+    }
+}
+
+/* **************************************************************************************** */
+
+/* Sur les écrans et quand la largeur de la fenêtre est au max 1280px */
+@media screen and (min-width:767px) and (max-width:1280px){
+
+}
+
+/* 
+On rajoute "only" afin d'appliquer un style uniquement si l'intégralité de la requête est vérifiée. 
+Il permet d'empêcher les anciens navigateurs qui ne prennent pas en charge les requêtes "media" avec les caractéristiques "media" d'appliquer les styles concernés 
+*/
+
+@media only screen and (max-width:1280px){
+
+}
+
+/* En mode impression */
+@media print{
+
+}
+
+/* Sur TV */
+@media tv{
+
+}
+
+/* Sur tous types d'écran */
+@media all and (min-width:767px) and (max-width:1280px){
+
+}
+
+/* Sur tous types d'écran orienté verticalement */
+@media all and (orientation: portrait){
+
+}
+
+/* Sur tous types d'écran orienté horizontalement */
+@media all and (orientation: landscape){
+
+}

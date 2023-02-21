@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/04_les_images.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Grégory Lyfoung : Les images en HTML">
+    <meta name="author" content=" Grégory Lyfoung">
+    <title>Les images en HTML</title>
+</head>
+<body>
+    <h1>Les images</h1>
+    <!-- 
+        La balise qui va nous permettre d'insérer une image c'est la balise <img>
+        C'est une balise de type orpheline
+        L'attribut "src" : il permet d'indiquer où se trouve l'image que l'on veut insérer
+        L'attribut "alt" : "texte alternatif" on doit toujours indiquer un texte alternatif à l'image, 
+        c'est une description de l'image.
+        Ce texte sera affiché à la place de l'image si celle-ci ne peut pas être télécharger sur la page, 
+        ou dans les navigateurs de personnes handicapées (non-voyants) 
+    -->
+    
+    <section>
+        <h2>1/ Image insérée en HTML</h2>
+        <!-- <h2 style="color: #4B1EFF;text-transform: uppercase;font-style: italic;">1/ Image insérée en HTML</h2> -->
+        <img src="img/Blue prime & Red Prime v2.png" alt="Blue and Red Prime" width="800">
+        <img src="img/Red prime v1.png" alt="Red Prime" width="400">
+        <!-- <img src="img/unnamed (1).jpg" alt="Chat 1"> -->
+        <!-- <img src="img/unnamed (2).jpg" alt="Chat 2"> -->
+        <!-- <img src="img/unnamed.jpg" alt="Chat 3"> -->
+
+        <!-- Ici dans "src" j'ai mis le chemin relatif de l'image -->
+
+        <img src="https://i.notretemps.com/1400x787/smart/2021/05/03/trois-facons-de-distraire-votre-chat-a-la-maison.jpeg" alt="Un chaton touuuuut mignon" width="500">
+        <!-- Ici dans "src" j'ai mis un chemin absolu de l'image -->
+        <!-- <img src="img/Red prime v1.png" alt="Red Prime" title="Red prime" width="400"> -->
+        <!-- Je rajoute une infobulle sur l'image -->
+
+    </section>
+
+    <section>
+        <h2>Les figures</h2>
+        <!-- Les figures sont des éléments qui viennent enrichir le texte pour compléter les infos sur l'image -->
+        <!-- Une figure est plus souvent accompagnée d'une légende. Pour ajouter une légende,
+        utilisez la balise <figcaption> à l'intérieur de la balise <figure> comme ceci: -->
+        
+            <figure>
+                <img src="img/Blue prime v1.png" alt="Blue Prime v2" height="700" title="Dragon Knight Blue">
+                <figcaption>Blue is one of the most powerful Dragon Knight</figcaption>
+            </figure>
+
+    </section>
+
+    <!-- section>h2+img*2 -->
+
+    <section class="imageFond">
+        <h2> 3/ Les images de fond insérées en CSS</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi tenetur perferendis maxime enim neque magnam veritatis officiis quam, impedit sapiente laboriosam accusantium voluptatem mollitia quidem assumenda quaerat perspiciatis nobis accusamus.
+            Velit voluptates, alias tempora amet consequatur voluptas! Deleniti unde neque, mollitia, officiis dolor repellendus illum eaque quisquam veritatis, obcaecati assumenda magnam. Totam non rerum et illo nostrum eius eveniet tenetur.
+            A non provident esse obcaecati soluta reiciendis eius aliquam at suscipit vel ad vero, beatae facilis perferendis quod porro alias dignissimos nesciunt ex similique est. Quasi ratione corporis nemo qui.
+        </p>
+
+    </section>
+
+    <section>
+        <h2>4/ Image avec animation en CSS</h2>
+        <img src="img/Blue prime ter v1.png" alt="Unmasked Blue" title="Unmasked Blue" class="image">
+        <img src="img/Blue Prime final v6.png" alt="Unmasked Blue bis" title="Unmasked Blue bis" class="image rotation360">
+        
+        <section>
+            <h2>5/ Image de type block</h2>
+            <img src="img/Blue prime ter v1.png" alt="Unmasked Blue v3" title="Unmasked Blue v3" class="imgBlue">
+            <img src="img/Blue Prime final v6.png" alt="Unmasked Blue v4" title="Unmasked Blue v4" class="imgBlue">
+            <img src="img/Blue prime final v5.png" alt="Unleashed Blue" title="Unleashed Blue" class="imgBlue">
+        </section>
+
+    </section>
+
+
+
+
+
+
+</body>
+</html>

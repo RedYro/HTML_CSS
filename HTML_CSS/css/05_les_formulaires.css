@@ -1,0 +1,10 @@
+body{
+    /* background-color: rgb(242, 242, 242); */
+    background-image: url(../img/Red\ &\ Blue\ armored\ v5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+fieldset{
+    background-color: aliceblue;
+}

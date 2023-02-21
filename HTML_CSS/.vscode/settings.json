@@ -1,0 +1,5 @@
+{
+    "editor.autoClosingBrackets": "always",
+    "files.autoSave": "onWindowChange",
+    "liveServer.settings.port": 5501
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="css/07_les_tableaux.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Grégory Lyfoung : Les tableaux en HTML">
+    <meta name="author" content=" Grégory Lyfoung">
+    <title>Les tableaux en HTML</title>
+</head>
+<body>
+    <h1>Un tableau, pour les données "tabulaires"</h1>
+    <!-- Ouverture du tableau -->
+    <table>
+        <!-- "caption" -> titre du tableau (non obligatoire, "légende") -->
+        <caption>Ventes de la semaine</caption>
+        <!-- "thead" est en-tête du tableau -->
+        <thead>
+            <!-- "tr"= table row -> rangée de tableau -->
+            <tr>
+                <!-- Cellules d'en-tête -->
+                <!-- "th"= table head -> les en-têtes des colonnes -->
+                <th>Jour</th>
+                <th>Smartphones</th>
+                <th>Tablettes</th>
+                <th>Ordinateurs</th>
+            </tr>
+        </thead>
+        <!-- "tbody" -> corps du tableau -->
+         <!-- <br> -->
+
+        <tbody>
+            <!-- tr*5>td*4 -->
+            <!-- "tr"= table row -> rangée du tableau -->
+            <!-- "td"= table date -> cellule du tableau -->
+            <tr>
+                <td>Lundi</td>
+                <td>10</td>
+                <td>5</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Mardi</td>
+                <td>20</td>
+                <td>10</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Mercredi</td>
+                <td>40</td>
+                <td>20</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td>Jeudi</td>
+                <td>60</td>
+                <td>30</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>Vendredi</td>
+                <td>80</td>
+                <td>40</td>
+                <td>120</td>
+            </tr>
+        </tbody>
+        <!-- "tfoot" -> table foot : pied du tableau -->
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td>80</td>
+                <td>70</td>
+                <td>90</td>
+            </tr>
+        </tfoot>
+
+    </table>
+    <!-- Fermeture du tableau -->
+     <!-- <br> -->
+
+    <h2>Rowspan / Colspan</h2>
+    <table>
+        <caption>Exemple de tableau avec <em>rowspan</em></caption>
+        <!-- "rowspan" est un attribut qui permet de déclarer qu'une cellule de tableau va faire la taille du nombre précisé entre guillements.
+            Si on met "rowspan="5"" alors notre cellule fera la taille de 5 cellules verticalement. 
+            Mais attention lorsque l'on fait cette manipulation, il faut penser à enlever les autres rangées de "td" qui correspondent 
+        -->
+        <tr>
+            <td>Nom</td>
+            <td>Mozart</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Email</td>
+            <td>mozart@gmail.com</td>
+        </tr>
+        <tr>
+            <!-- <td>Email</td> -->
+            <td>bestcomposer@free.fr</td>
+        </tr>
+    </table>
+
+     <!-- <br> -->
+
+    <table id="demoColspan">
+        <caption></caption>
+        <!-- tr*7>td*7 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+            <td class="noir"></td>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td colspan="2"></td>
+            <td colspan="3" class="noir"></td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="5" class="noir"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2"></td>
+            <td colspan="3" class="noir"></td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+            <td class="noir"></td>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <table id="demoColspan2">
+        <caption></caption>
+        <!-- tr*7>td*7 -->
+        <tr>
+            <td></td>
+            <td colspan="2" class="noir2"></td>           
+            <td></td>
+            <td colspan="2" class="noir2"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="5" class="noir2"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="7" class="noir2"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="5" class="noir2"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2"></td>
+            <td colspan="3" class="noir2"></td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+            <td class="noir2"></td>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    
+
+</body>
+</html>

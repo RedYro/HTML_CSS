@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(92, 89, 255);
+    width: 50%;
+    margin: auto;
+    /*padding: 10px;*/
+    /*border-style: solid;
+    border-width: 18px;
+    border-color: antiquewhite;*/
+
+    border: solid 5px rgb(139, 131, 253);
+    /*border: bordure extérieur de l'élément
+    border : 3 valeurs : épaisseur, type de filet, couleur
+    */
+
+    /*text-align: center;*/
+}
+
+header{
+    /*padding: 20px;*/
+    background-color: rgb(121, 134, 255);
+    color: white;
+    height: 200px; /*hauteur*/
+}
+
+main, footer, header{
+    padding: 20px;
+}

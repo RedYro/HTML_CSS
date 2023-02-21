@@ -1,0 +1,562 @@
+/* Principe du "flexbox": permet de passer d'un contexte bloc à un contexte flex,
+ pour le faire il faut appliquer un modèle de boîte flexible sur le conteneur de mes éléments,
+ : le conteneur = élément parent
+ Dans le contexte flex l'on va avoir un acex principal ("main axis"), il est par défaut horizontal et commence à gauche
+ Les éléments qui sont à l'intérieur du parent (avec un contexte "flex") vont être distribués en fonction de cet axe principal.
+ La terminologie : 
+            -parent avec du "flex" => "container"
+            -éléments à l'intérieur du container => "items" 
+*/
+
+/* ****** A - Comportement normal ****** */
+
+body{
+    /* background-color: rgb(109, 109, 109); */
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(118,132,255,1) 50%, rgba(0,0,0,1) 100%);
+    /* background-image: url(../img/LoL_Ionia_Yasuo_BG.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+p{
+    font-size: 20px;
+    color: white;
+}
+
+div{
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+span{
+    font-weight: bold;
+    color: rgb(106, 204, 196);
+}
+
+h1{
+    color: white;
+}
+
+h2{
+    color: white;
+    font-size: 30px;
+}
+
+h3{
+    color: white;
+    font-size: 25px;
+}
+
+h4{
+    color: white;
+    font-size: 20px;
+}
+
+.style{
+    /* border: 2px solid black; */
+    border: 8px solid rgb(255, 255, 255);
+}
+
+.style div{
+    /* border: 4px solid rgb(255, 255, 255); */
+    width: 450px;
+    height: 300px;
+}
+
+/* #containerA :nth-child(even){
+    text-align: center;
+}
+
+#containerA :nth-child(odd){
+    text-align: center;
+} */
+
+.style :nth-child(1){
+    /* background-color: orange; */
+    /* background: rgb(0,0,0); */
+    /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,150,1,1) 50%, rgba(0,0,0,1) 100%); */
+    background-image: url(../img/Shyvana_Championship.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.style :nth-child(2){
+    /* background-color: blue; */
+    /* background: rgb(0,0,0); */
+    /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(1,19,255,1) 50%, rgba(0,0,0,1) 100%); */
+    background-image: url(../img/Zed_Championship.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.style :nth-child(3){
+    /* background-color: green; */
+    /* background: rgb(0,0,0); */
+    /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(75,179,0,1) 50%, rgba(0,0,0,1) 100%); */
+    background-image: url(../img/Ashe_Championship.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ****** B - Ajour de "flex" au "container" ****** */
+
+#containerB{
+    display: flex;
+}
+/* Instruction à donner au parent, suite à cette application les éléments dans le "containerB" ont totalement changé: les div s'affichent côte à côte */
+
+/* #containerB div{
+    width: 200px;
+    height: 150px;
+} */
+
+/* #containerB :nth-child(even){
+    text-align: center;
+}
+
+#containerB :nth-child(odd){
+    text-align: center;
+} */
+
+/* #containerB :nth-child(1){   
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,150,1,1) 50%, rgba(0,0,0,1) 100%);
+}
+
+#containerB :nth-child(2){
+   
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(1,19,255,1) 50%, rgba(0,0,0,1) 100%);
+}
+
+#containerB :nth-child(3){    
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(75,179,0,1) 50%, rgba(0,0,0,1) 100%);
+} */
+
+/* *** Column *** */
+
+#containerColumn{
+    display: flex;
+    flex-direction: column;
+}
+
+/* #containerColumn div{
+    width: 200px;
+    height: 150px;
+} */
+
+/* #containerColumn :nth-child(even){
+    text-align: center;
+}
+
+#containerColumn :nth-child(odd){
+    text-align: center;
+} */
+
+/* #containerColumn :nth-child(1){
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,150,1,1) 50%, rgba(0,0,0,1) 100%);
+}
+
+#containerColumn :nth-child(2){
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(1,19,255,1) 50%, rgba(0,0,0,1) 100%);
+}
+
+#containerColumn :nth-child(3){
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(75,179,0,1) 50%, rgba(0,0,0,1) 100%);
+} */
+
+/* *** Row-reverse *** */
+
+#containerRowReverse{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#containerColumnReverse{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/* *** Wrap *** */
+
+#containerC{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#containerCReverse{
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+/* ****** E - Alignement ****** */
+
+/* *** flex-start - direction horizontale *** */
+
+#containerFlex-start{
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* *** flex-end - direction horizontale *** */
+
+#containerFlex-end{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* *** center - direction horizontale *** */
+
+#containerCenter{
+    display: flex;
+    justify-content: center;
+}
+
+/* *** space-between - direction horizontale *** */
+
+#containerSpaceBetween{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* *** space-around - direction horizontale *** */
+
+#containerSpaceAround{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* *** space-evenly - direction horizontale *** */
+
+#containerSpaceEvenly{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* *** flex-start - direction verticale *** */
+
+#containerFlex-startVertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* *** flex-end - direction verticale *** */
+
+
+#containerFlex-endVertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 1500px;
+}
+
+/* *** center - direction verticale *** */
+
+#containerCenterVertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 1500px;
+}
+
+/* *** space-between - direction verticale *** */
+
+#containerSpaceBetweenVertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 1500px;
+}
+
+/* *** space-around - direction verticale *** */
+
+#containerSpaceAroundVertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 1500px;
+}
+
+/* *** space-evenly - direction verticale *** */
+
+#containerSpaceEvenlyVertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 1500px;
+}
+
+/* ****** Aligner sur l'axe secondaire ****** */
+
+/* *** flex-start - direction horizontale *** */
+
+#containerE-AI-FS-H{
+    display: flex;
+    height: 600px;
+    align-items: flex-start;
+}
+
+/* *** flex-end - direction horizontale *** */
+
+#containerE-AI-FE-H{
+    display: flex;
+    height: 600px;
+    align-items: flex-end;
+}
+
+/* *** center - direction horizontale *** */
+
+#containerE-AI-C-V{
+    display: flex;
+    /* flex-direction: row; */
+    height: 600px;
+    align-items: center;
+}
+
+/* *** stretch - direction horizontale *** */
+
+#containerE-AI-S-H{
+    display: flex;
+    /* width: 700px; */
+    height: 600px;
+    align-items: stretch;
+}
+
+/* *** baseline - direction horizontale *** */
+
+#containerE-AI-B-H{
+    display: flex;
+    height: 600px;
+    align-items: baseline;
+/* Les éléments vont être alignés dans leur axe secondaire de telle sorte à ce que leurs lignes de bas (ligne imaginaire sur laquelle est écrit le texte) soit alignées */
+}
+
+#containerE-AI-B-H :nth-child(1){
+    padding: 30px;
+}
+
+#containerE-AI-B-H :nth-child(3){
+    padding: 50px;
+}
+
+/* *** btn bas/haut *** */
+
+.fa-solid{
+    color: rgba(34, 0, 255, 0.503);
+    font-size: 50px;
+}
+
+.fa-solid:hover{
+    color: #000d84;
+}
+
+.btnRetour2{
+    position: fixed;
+    bottom: 47px;
+    right: 100px;
+}
+
+.btnRetour4{
+    position: fixed;
+    bottom: 47px;
+    right: 160px;
+}
+
+/* *** center - direction verticale *** */
+
+#containerE-AI-C-V{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1000px;
+}
+
+/* ****** Alignement d'un seul élément ****** */
+
+/* *** align-self - flex end *** */
+
+#containerE-AS{
+    display: flex;
+    align-items: center;
+    height: 700px;
+}
+
+#containerE-AS :nth-child(2){
+    align-self: flex-end;
+}
+
+/* ****** F - Répartir plusieurs lignes ****** */
+
+#containerF{
+    display: flex;
+    height: 500px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+#containerF div{
+    width: 250px;
+    height: 150px;
+}
+
+#containerF :nth-child(1){
+	background-color: orange;
+	border: 1px solid black;
+}
+
+#containerF :nth-child(2){
+	background-color: blue;
+	border: 1px solid black;
+}
+
+#containerF :nth-child(3){
+	background-color: green;
+	border: 1px solid black;
+}
+
+#containerF :nth-child(4){
+	/* background-color: orange; */
+	border: 1px solid black;
+    background-image: url(../img/Aatrox_original.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#containerF :nth-child(5){
+	/* background-color: blue; */
+	border: 1px solid black;
+    background-image: url(../img/Ahri_Midnight.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#containerF :nth-child(6){
+	/* background-color: green; */
+	border: 1px solid black;
+    background-image: url(../img/Ashe_Coven.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#containerF :nth-child(7){
+	/* background-color: orange; */
+	border: 1px solid black;
+    background-image: url(../img/Ekko_PROJECT.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#containerF :nth-child(8){
+	/* background-color: blue; */
+	border: 1px solid black;
+    background-image: url(../img/Ahri_Coven.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#containerF :nth-child(9){
+	/* background-color: green; */
+	border: 1px solid black;
+    background-image: url(../img/Riven_Dawnbringer.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#containerF :nth-child(10){
+	/* background-color: orange; */
+	border: 1px solid black;
+    background-image: url(../img/Rhaast_original.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#containerF :nth-child(11){
+	/* background-color: blue; */
+	border: 1px solid black;
+    background-image: url(../img/Yasuo_Nightbringer.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#containerF :nth-child(12){
+	/* background-color: green; */
+	border: 1px solid black;
+    background-image: url(../img/Zed_PROJECT.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.stretch{
+    align-content: stretch;
+}
+
+.start{
+    align-content: flex-start;
+}
+
+.end{
+    align-content: flex-end;
+}
+
+.center{
+    align-content: center;
+}
+
+.between{
+    align-content: space-between;
+}
+
+.around{
+    align-content: space-around;
+}
+
+.evenly{
+    align-content: space-evenly;
+}
+
+/* ****** G - "Order"" ****** */
+
+/* *** Par défaut *** */
+
+#containerG{
+    display: flex;
+}
+
+/* *** Ordre appliqué *** */
+
+#containerGOrder{
+    display: flex;
+}
+
+#containerGOrder :nth-child(1){
+    order: 3;
+}
+
+#containerGOrder :nth-child(2){
+    order: 1;
+}
+
+#containerGOrder :nth-child(3){
+    order: 2;
+}
